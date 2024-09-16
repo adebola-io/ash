@@ -1,4 +1,4 @@
-FROM golang:1.19-alpine AS builder
+FROM golang:latest
 
 WORKDIR /app
 
@@ -6,12 +6,8 @@ COPY . .
 
 RUN go build -o /app/ash .
 
-FROM alpine:latest
+RUN ls
 
-WORKDIR /app
-
-COPY --from=builder /app/ash /app/ash
-
-EXPOSE 8080
+EXPOSE 3002
 
 CMD ["/app/ash"]
