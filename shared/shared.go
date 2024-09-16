@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-var BASE_URL = "http://localhost:8080"
+var BASE_URL = "https://adebola-io-ash.hf.space"
 var BASE_URL_DEV = "http://localhost:8080"
 
 type PortfolioWorkView struct {
