@@ -22,7 +22,7 @@ func WorkCard(work *shared.PortfolioWork) string {
 	}
 	svg := ""
 	if work.View.Banner == "" {
-		svg += `<img class="work-svg-icon" loading="lazy" style="height: {{.View.SvgWidth}}" src="{{.View.Svg}}" alt="Svg icon"/>`
+		svg += `<img class="work-svg-icon" loading="lazy" style="width: {{.View.SvgWidth}}" src="{{.View.Svg}}" alt="Svg icon"/>`
 	}
 	themeColor := "rgb("
 	for i, colorComponent := range work.View.Theme {
